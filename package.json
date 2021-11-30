@@ -1,5 +1,6 @@
 {
   "scripts": {
-      "deploy:vercel": "sh deploy-vercel.sh"
+      "deploy:vercel": "sh deploy-vercel.sh",
+      "dev": "pagic build --watch --serve"
   }
 }
