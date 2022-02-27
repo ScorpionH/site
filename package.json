@@ -1,6 +1,8 @@
 {
+  "name": "scorpion",
+  "license": "ISC",
   "scripts": {
-      "deploy:vercel": "sh deploy-vercel.sh",
-      "dev": "pagic build --watch --serve"
+    "deploy:vercel": "sh deploy-vercel.sh",
+    "dev": "pagic build --watch --serve"
   }
 }
