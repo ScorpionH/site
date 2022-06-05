@@ -117,6 +117,7 @@ int sum_arr(int arr[], int n)
     return total;
 }
 
+
 // output
 // 地址值和数组的长度将随系统而异。
 0x78fdf0 = array address, 32 = sizeof cookies
