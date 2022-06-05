@@ -212,6 +212,42 @@ DebugPrint: 0x35220810a4dd: [JS_OBJECT_TYPE]
  - inobject properties: 4
  ...
 ```
+## 题外话----JS闭包函数里是包含了词法环境中所有能访问的变量还是只包含函数内部使用的变量？
+```javascript
+function AAA1() {
+    this.name = 'AAA1';
+}
+function AAA2() {
+    this.name = 'AAA2';
+}
+function fn() {
+    var a1 = new AAA1();
+    var a2 = new AAA2();
+    return function () {
+        return a2;
+    }
+}
+var f = fn();
+```
+**变量a2肯定存在于内存中毋庸置疑，a1会被释放么？**      
+
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+<br/>  
+
+**谷歌浏览器（102.0.5005.63）版本下：a1没有在闭包中**  
+
+![alt closure](../assets/images/closure.jpg)
 
 ## 参考资料
 > 图解Google V8
